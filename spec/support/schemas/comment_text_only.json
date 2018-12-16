@@ -1,0 +1,36 @@
+{
+  "description": "A single comment, text only",
+  "type": "object",
+  "required": [
+    "id",
+    "text",
+    "attachment",
+    "task_id",
+    "created_at"
+  ],
+  "properties": {
+    "id": { "type": "integer" },
+    "text": { "type": "text" },
+    "attachment": {
+      "type": "object",
+      "required": [
+        "url",
+        "preview"
+      ],
+      "properties": {
+        "url": { "type": "null" },
+        "preview": {
+          "type": "object",
+          "required": [
+            "url"
+          ],
+          "properties": {
+            "url": { "type": "null" }
+          }
+        }
+      }
+    },
+    "task_id": { "type": "integer" },
+    "created_at": { "type": "string", "format": "date-time" }
+  }
+}

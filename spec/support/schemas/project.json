@@ -1,0 +1,19 @@
+{
+  "description": "A single project",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "created_at",
+    "tasks"
+  ],
+  "properties": {
+    "id": { "type": "integer" },
+    "name": { "type": "text" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "tasks": {
+      "type": "array",
+      "items": { "$ref": "task.json" }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "description": "A list of comments, text only",
+  "type": "array",
+  "items": { "$ref": "comment_text_only.json" }
+}

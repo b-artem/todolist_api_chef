@@ -1,0 +1,27 @@
+{
+  "description": "A single task",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "done",
+    "deadline",
+    "created_at",
+    "project_id",
+    "priority",
+    "comments"
+  ],
+  "properties": {
+    "id": { "type": "integer" },
+    "name": { "type": "text" },
+    "done": { "type": [ "boolean", "null" ] },
+    "deadline": { "type": [ "string", "null" ], "format": "date-time" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "project_id": { "type": "integer" },
+    "priority": { "type": "integer" },
+    "comments": {
+      "type": "array",
+      "items": { "$ref": "comment_text_only.json" }
+    }
+  }
+}

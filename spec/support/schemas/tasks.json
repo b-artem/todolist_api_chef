@@ -1,0 +1,5 @@
+{
+  "description": "A list of tasks",
+  "type": "array",
+  "items": { "$ref": "task.json" }
+}
