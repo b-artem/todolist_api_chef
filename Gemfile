@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.4.2"
+ruby "2.5.3"
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -18,7 +18,7 @@ gem 'fog-aws', '~> 2.0'
 gem 'mini_magick', '~> 4.8'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 5.2.1'
 gem 'rack-cors', '~> 1.0', '>= 1.0.2', require: 'rack/cors'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
