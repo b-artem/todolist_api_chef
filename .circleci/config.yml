@@ -1,0 +1,78 @@
+version: 2
+jobs: # a collection of steps
+  build: # runs not using Workflows must have a `build` job as entry point
+    # parallelism: 2
+    working_directory: ~/todolist_api_chef
+    docker:
+      - image: circleci/ruby:2.5.3
+        environment:
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+          PGHOST: localhost
+          PGUSER: todolist_api_chef
+          RAILS_ENV: test
+          RAKE_ENV: test # if rake is used
+          AWS_ACCESS_KEY_ID: "fake_test_key"
+          AWS_SECRET_ACCESS_KEY: "fake_test_key"
+      - image: circleci/postgres:10.1
+        environment:
+          POSTGRES_USER: todolist_api_chef
+          POSTGRES_DB: todolist_api_chef_test
+          POSTGRES_PASSWORD: ""
+    steps: # a collection of executable commands
+      - checkout # special step to check out source code to working directory
+      # Which version of bundler?
+      - run:
+          name: Which bundler?
+          command: bundle -v
+      # Restore bundle cache
+      - restore_cache:
+          keys:
+            - todolist-api-chef-bundle-v2-{{ checksum "Gemfile.lock" }}
+            - todolist-api-chef-bundle-v2-
+      - run:
+          name: Bundle install
+          command: bundle check || bundle install
+      # Store bundle cache
+      - save_cache:
+          key: todolist-api-chef-bundle-v2-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+
+      # To overwrite configs in database.yml
+      - run:
+          name: Prepare DB configuration file
+          command: |
+            mkdir -p config && echo 'test:
+              adapter: postgresql
+              encoding: unicode
+              pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+              username: todolist_api_chef
+              database: todolist_api_chef_test
+              host: localhost
+            ' > config/database.yml
+
+      - run:
+          name: Wait for DB
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+      - run:
+          name: Database setup
+          command: bin/rails db:schema:load --trace
+
+      - run:
+          name: Run RSpec
+          command: bundle exec rspec
+
+      # - run:
+          # name: Run rspec in parallel
+          # command: |
+          #   bundle exec rspec --profile 10 \
+          #                     --format RspecJunitFormatter \
+          #                     --out test_results/rspec.xml \
+          #                     --format progress \
+          #                     $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
+
+      # Save test results for timing analysis
+      - store_test_results:
+          path: test_results
