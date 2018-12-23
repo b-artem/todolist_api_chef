@@ -1,0 +1,17 @@
+{
+  "name": "todolist-api-chef",
+  "environment": "production",
+  "project": {
+    "branch": "master"
+  },
+  "run_list": [
+    "role[setup]",
+    "role[database]",
+    "role[web]",
+    "role[security]",
+    "role[deploy]"
+  ],
+  "automatic": {
+    "ipaddress": "18.213.118.145"
+  }
+}

@@ -5,18 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create!([
-  {email: "user@user.ua", password: "password" },
-  {email: "user2@user.ua", password: "password2" }
-])
 
-Project.create!([
+[
+  { email: 'user@user.ua', password: 'password' },
+  { email: 'user2@user.ua', password: 'password2' }
+].each do |user|
+  User.find_or_create_by!(email: user[:email]) do |new_user|
+    new_user.password = user[:password]
+  end
+end
+
+[
   { name: 'Trip to a new place', user_id: 1 },
   { name: 'Another project', user_id: 1 },
   { name: 'Project number 3', user_id: 2 }
-])
+].each do |project|
+  Project.find_or_create_by!(project)
+end
 
-Task.create!([
+[
   { name: 'Buy airway tickets', project_id: 1 },
   { name: 'Book an apartment', project_id: 1 },
   { name: 'Buy railway and bus tickets', project_id: 1 },
@@ -27,4 +34,6 @@ Task.create!([
   { name: 'Very important task', project_id: 2 },
   { name: 'Go to the cinema', project_id: 3 },
   { name: 'Drink coffee', project_id: 3, done: true }
-])
+].each do |task|
+  Task.find_or_create_by!(task)
+end
