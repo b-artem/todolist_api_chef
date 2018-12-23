@@ -1,0 +1,21 @@
+{
+  "id": "staging",
+  "application": {
+    "encrypted_data": "W6c2PPXR7BrldJzKLVyGcrELoBCo1HTl3AbNGtN+66/IyOCdmLgc+Edu0UGa\nsF5dQ3MTHOLvwNZSFq2HVMXSTk/4jTHt3av6fI6PQ5gFy99x/OIfyBwa0exG\nLbkkX9XCeJmonaeIB0hWXRXGO3W1jTzPfMoyVOOagqoRuBKsFQeBkI/K90Q8\nPzSGvEDrkNMgEp4boddectiBb6PSTMgKq/b+1T2lfVoqXyW9V7GwwxiYX43m\nv5OP4S17Gq5C/DbO8uTTHzllR9+MtUp7hBtNYKwEwCYBS2jWZECvYngNn0fT\nJidqBr+qC4/FSpwyIJXqeQev/KAIRUeJFLYpntCmCSkmKrBy69XhoYUjrMiI\nO/XSk4cLhy+xIN2tZRgY7uPo7yH7jvETodpizxMuGOPNw34wxP59CplbTwB9\nbul89xE=\n",
+    "iv": "zFN/sEveqT30IqljdBPnNw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "database": {
+    "encrypted_data": "uiUsE1cDt5BYcZnoWAJdrfM4HydGVaxyl7oAa8gTE3zjnPWpHDtJzOSuy9qp\n61HBtc3kp0bto6IPJIRBvxGnIT5WihU0kvyFW8slyp4mE869cDZ3vQ71522j\nlhjQVTM10LJABnIcBg2kQfxkDbZh202WiUnaBfE97PjLRKR3gJk=\n",
+    "iv": "pCVy7bn+vWsE4ymPohqurA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "monit": {
+    "encrypted_data": "e4S8B1O83RDQa3Zero7pVERQc1wNLAPqbMCe+SmZXTKxRpJINGzh+6dA+bCX\nUOTVqT3aPYzwzZb6MIap0T8RzQ==\n",
+    "iv": "sqmnEXcbdXwR859X5Fw5fQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

@@ -1,0 +1,3 @@
+/cookbooks/
+encrypted_data_bag_secret
+/site-cookbooks/app-deploy/files/default
