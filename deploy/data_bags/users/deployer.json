@@ -1,0 +1,9 @@
+{
+  "id": "deployer",
+  "password": "$1$pLkeCZ5O$zKvLFmXDtQhhB3Ur6ual71",
+  "ssh_keys": [
+    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDjVBL93FAFrNd2HdCyBsa+HaAOP5Tc+Evot1KVG5Fw04xd18fphOOHBJLFgW9SzHRatbwbm3yBZa2HyNSKv+eGG2ujwoMMrhzk8WzipPsP0tM20IwubvflDOMb0pw6YFLk7cMqpRJwEyE/XG02g7/dqvkn7ihwBqeiLrQ7A1XyX+ZYQgEI/a1MMRJp505FT7DzRr0ADkeWtatn/PLekxYyIvke50vKGW+QCN30FBRBVr2Vpo4Pupk80enZuOyf6QbdsxXZKJAWCXvwWTtkgP5xQUTKajIaU/wSlzdlxrg+1mDk9mkfwwQH3aVUIZOK5WKaOB7nzIc5xmeDPuqhb7n/5qmq9thSHj9Hw/4PXlV5lfHsEVBZMgFnXifIu7wnHrGKi273d3HhMssELGEgBZS0WhK8ck1KM3w4U7UXKFsjyjYwhmOaLDce/0XZPvO0q8oUzfUmjK2Gl5KzbX5ejQvK84p/ZqKvT6Jhy/35gZleKS2K3IBY29Wwu/xmz2RzsiifhQvaDBrNM3RE1W5d6Yhpd4iq6IZdKL4g7lulV1nn8RzVoRJdXzd4sVCGXgACJAhboHO9i9ZlFvJtE9qCPpYsROmweUZXDZqjnFwSpQZXWmXIDySwnejsei1UAwOkpdvOWIHPGQevDtUaVHnVYvkJ9XnE5l6bXssg870i7BgaYw== artemb.dev@gmail.com"
+  ],
+  "groups": ["sudo" ,"sysadmin", "www-data"],
+  "shell": "\/bin\/bash"
+}

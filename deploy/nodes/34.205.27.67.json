@@ -1,0 +1,18 @@
+/* Can't use underscores here like todolist_api_chef, as it goes for hostname also */
+{
+  "name": "todolist-api-chef",
+  "environment": "staging",
+  "project": {
+    "branch": "feature/chef-deploy"
+  },
+  "run_list": [
+    "role[setup]",
+    "role[database]",
+    "role[web]",
+    "role[security]",
+    "role[deploy]"
+  ],
+  "automatic": {
+    "ipaddress": "34.205.27.67"
+  }
+}
