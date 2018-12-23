@@ -23,7 +23,8 @@ server {
     gzip_static on;
     proxy_pass http://puma;
   }
-  location ~* \.(?:manifest|appcache|html?|json)$ {
+  <%# TODO: uncomment if needed %>
+  <%# location ~* \.(?:manifest|appcache|html?|json)$ {
     expires -1;
   }
   location ~* \.(?:css|js)$ {
@@ -36,7 +37,7 @@ server {
     try_files $uri =404;
     access_log off;
     expires max;
-  }
+  } %>
   error_page 503 @maintenance;
   location @maintenance {
     rewrite ^(.*)$ /maintenance.html break;

@@ -214,16 +214,17 @@ timestamped_deploy node['domain'] do
       )
     end
 
-    execute 'assets:precompile' do
-      command "/bin/bash -lc 'source $HOME/.rvm/scripts/rvm && bundle exec rake assets:precompile'"
-      cwd release_path
-      user 'root'
-      group 'root'
-      environment(
-        'HOME' => home_path,
-        'RAILS_ENV' => node.environment
-      )
-    end
+    # TODO: DISABLED FOR API
+    # execute 'assets:precompile' do
+    #   command "/bin/bash -lc 'source $HOME/.rvm/scripts/rvm && bundle exec rake assets:precompile'"
+    #   cwd release_path
+    #   user 'root'
+    #   group 'root'
+    #   environment(
+    #     'HOME' => home_path,
+    #     'RAILS_ENV' => node.environment
+    #   )
+    # end
   end
 
   # Once you've restarted the app, remove the maintenance file
