@@ -1,0 +1,21 @@
+{
+  "id": "production",
+  "application": {
+    "encrypted_data": "KKJaKfYV/JhVqtVQpzPSpghJBJdT3/JsB1qR2tnK+xp2yJmzdEZwGqneHcts\nwnCeFHIPKHEBzPLwb/Egvqo7DxwY9IJ7tNuA3GKlT3pBa3xkJy+WOzV/Azlm\nsfKb5NzA95x+wnYXQt4kFSs5Z5cLRuFprFwSbaFQR/luPTtepzoLDuhSfONq\n7qEVKuttKNhU9eRr8ZrUcpG1w+/7ikcoloccCLyqEkdfJWx528EyEilLj55M\n1hKrAA4CSDfLHZ4IdbrGHIY7N9A0MM3musLMwfy8SJftGVlC9XTZXXm6V3im\nXWcIAIiZ61K5sejb0i6rVcGX6PkEHwtZp277QjvYc/l7BVnswELYA3DwjHTT\nn5ccbAskb3Gs1prRiR+cFjR3zlsPf6fp7ewHwdxrGkAqyLzrKNGzIM+G7O65\ncEjQkvg=\n",
+    "iv": "ERpLTVsZlj1BrPnjpPTDyw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "database": {
+    "encrypted_data": "kQwoQQ75MdVieYYPLwpCph2WXk4hORjchVQAIx3rozyk/56rvdNdrLe3As27\nKDy7sN06fQ05OYYKOgSVvErImE3526GposJL8Sb4WuVWX80pX99G2snvmhbj\ntV4R0bmZYYYSn7Y0C9/j7E8r3s4HNqvsVlfhTQ7zdE41I/a/Nio=\n",
+    "iv": "RJ5uv+h2AFq9aTumpbxb0g==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "monit": {
+    "encrypted_data": "6i5ohx6mF+xDBtw6Zs2BkKTNxUKM4eXQEY/0671h5KWt3KBrkUCjJ6KQYqZ5\nQTEqwwYCWPfxDCHJt7qm4hQQwQ==\n",
+    "iv": "jAZcisVgVVkQ6YdDPAXAHg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}
